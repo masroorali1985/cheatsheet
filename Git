@@ -12,4 +12,5 @@ git checkout hash			# to jump to previous version of the file
 git checkout master			# to jump to master branch
 git branch				# to list the branches
 git branch newname			# to create a new branch
-git clone https://github.com/xyzrepo	# to clone the github repository	
+git clone https://github.com/xyzrepo	# to clone the github repository
+	

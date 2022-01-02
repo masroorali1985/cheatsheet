@@ -1,7 +1,63 @@
-show net interface all-properties
-show net interface all-properties raw
-show net interface 1.1 all-properties raw
+diagnose debug disable 
+diagnose debug flow trace stop 
+diagnose debug flow filter clear 
+diagnose debug reset 
 
-show net trunk
+diagnose debug flow filter addr 192.168.250.50
+diagnose debug flow show console enable
+diagnose debug flow show function-name enable
+diagnose debug console timestamp enable
+diagnose debug flow trace start 999
+diagnose debug enable
 
-show net arp all
+============================================
+
+diag debug reset
+diag debug flow filter clear
+diag debug flow filter saddr 192.168.254.1
+diag debug flow show console en
+diag debug flow show function-name en
+diag debug flow trace start 10000
+diag debug enable
+
+============================================
+
+New Command:
+
+diag debug reset 
+diagnose vpn ike filter clear 
+diag vpn ike log-filter dst-addr4 x.x.x.x
+diag debug console timestamp enable
+diag debug application ike -1 
+diag debug disable
+
+
+============================================
+SSL VPN 
+============================================
+diag deb reset
+diag sniffer packet any "host 10.30.16.33" 6 0 a
+diag deb appl sslvpn -1
+diag deb en
+diag deb dis
+
+===========================================
+for IPSEC VPN
+===========================================
+diagnose debug reset 
+diag debug flow filter addr 82.178.126.138
+diagnose debug application ike -1
+diagnose debug console timestamp enable 
+diagnose debug application fnbamd -1
+diagnose debug enable 
+
+===========================================
+sniffer configuration example
+===========================================
+
+diag sniffer packet any 'host 10.56.41.1 and host 10.0.17.16'
+diag sniffer packet any 'host 172.29.9.2 and tcp port 1199'
+
+diag sniffer packet any 'host 46.40.246.203 and udp'
+
+diagnose sniffer packet "any" 'net 2a0b:d580::/64' 
