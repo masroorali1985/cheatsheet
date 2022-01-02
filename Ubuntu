@@ -1,0 +1,7 @@
+show net interface all-properties
+show net interface all-properties raw
+show net interface 1.1 all-properties raw
+
+show net trunk
+
+show net arp all
