@@ -1,0 +1,9 @@
+gpg --full-gen-key                                    # To Generate the key
+                                                      # To Specify bits long
+                                                      # To Specify key expiry
+                                                      # To Specify the Name
+                                                      # To Specify the Email
+gpg -r "recepient email" -e "file name"               # to encrpt the file with the key
+gpg -d file.gpg                                       # To decrpyt the file 
+gpg --export Masroor.ali@1und1.de > public.key        # to export public key
+gpg --export-secret-keys -a Masroor Ali > private.key # to export private key
