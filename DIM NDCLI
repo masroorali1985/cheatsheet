@@ -1,0 +1,7 @@
+DIM NDCLI
+
+ndcli show ip 10.244.75.1
+
+ndcli create --help
+
+ndcli create -n rr --help
