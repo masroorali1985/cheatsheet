@@ -11,3 +11,8 @@ show net arp all
 F5 Packet capture
 ==========================================================
 tcpdump -ni 0.0:nnnp host 10.8.12.72 -s0 -vvv -c 10000 -w /var/tmp/cookie_test.pcap 
+
+
+cd /config/
+ls
+grep -r 'de.kaw-bs-poci-snat-fe-qa'
