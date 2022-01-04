@@ -5,3 +5,6 @@ ndcli show ip 10.244.75.1
 ndcli create --help
 
 ndcli create -n rr --help
+
+
+ndcli create -n rr polb-k8s-qa-bap-koopa. A 10.86.5.132 --overwrite-ptr
