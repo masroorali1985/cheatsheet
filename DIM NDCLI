@@ -7,3 +7,5 @@ ndcli create --help
 ndcli create -n rr --help
 
 ndcli create -n rr polb-k8s-qa-bap-koopa. A 10.86.5.132 --overwrite-ptr
+
+ndcli delete -n rr pold-k8s-qa-bap-koopa. A 10.86.5.132 --keep-ip-reservation
