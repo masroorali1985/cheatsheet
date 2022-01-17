@@ -30,6 +30,25 @@ F5 Packet capture
 ==========================================================
 tcpdump -ni 0.0:nnnp host 10.8.12.72 -s0 -vvv -c 10000 -w /var/tmp/cookie_test.pcap 
 
+capture host in a vlan
+----------------------
+tcpdump -i vlan1388 dst host 10.85.5.10
+
+Disable name resolution
+-----------------------
+tcpdump -ni vlan1388 dst host 10.85.5.10
+
+tcpdump 'tcp[tcpflags] & (tcp-syn) != 0'
+tcpdump 'tcp[tcpflags] & (tcp-rst) != 0'
+
+tcpdump -ni vlan1388 -w proxy_maali_troubleshooting host 10.86.5.10
+
+
+tcpdump host 10.90.100.1 and port 80
+tcpdump src host 172.16.101.20 and dst port 80
+tcpdump src host 172.16.101.20 and dst host 10.90.100.1
+
+
 
 cd /config/
 ls
@@ -41,3 +60,13 @@ changing partition LTM commands
 ==========================================
 cd "partition name"
 
+
+
+
+
+Command line utility
+tmsh show /ltm pool <pool_name>
+tmsh show /ltm node <node_IP>
+
+bash bigtop -n
+bash bigpipe pool show, bigpipe node show
