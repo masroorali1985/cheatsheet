@@ -70,3 +70,26 @@ tmsh show /ltm node <node_IP>
 
 bash bigtop -n
 bash bigpipe pool show, bigpipe node show
+
+
+
+For the CPU utilization (short by average 5 seconds)
+You may try this command:
+
+# tmctl -d blade virtual_server_cpu_stat -K avg_5sec -O -L 10
+
+The example output will be similar to:
+name                        avg_5sec avg_1min avg_5min slot_id
+--------------------------- -------- -------- -------- -------
+/Common/TEST_VS1                   0        0        0       0
+/Common/TEST_VS2                   0        0        0       0
+/Common/REJECT                     0        0        0       0
+/Common/TCP                        0        0        0       0
+/Common/TEST_IRULE                 0        0        0       0
+
+The -K is sort based on which column and the -L means how many output entries.
+
+This means the TMCTL command is getting the virtual server CPU status, sorting by the avg_5sec column and output top 10 entires.
+You may modify the command based on the need, to output more entries.
+
+The output value is not the CPU utilization (%), but a number to refer that which one is taking more CPU resources.
