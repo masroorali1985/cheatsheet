@@ -1,4 +1,6 @@
-for ((i=1;i<=10;i++)); do curl  -I -k "https://google.com"; done
 
 option 1 using hey
 https://manpages.ubuntu.com/manpages/focal/man1/hey.1.html
+
+option 2 using for loop
+for ((i=1;i<=10;i++)); do curl  -I -k "https://google.com"; done
