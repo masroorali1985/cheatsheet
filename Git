@@ -14,3 +14,7 @@ git branch				# to list the branches
 git branch newname			# to create a new branch
 git clone https://github.com/xyzrepo	# to clone the github repository
 	
+	
+	
+pull changes into master
+git pull origin master --rebase
