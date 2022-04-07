@@ -7,14 +7,11 @@ git status				# to check the status of the repo
 git add FILE.txt			# to stage the file before comit
 git add .				# to stage all files before comit
 git comit -m "comit message"		# to comit the file with message
-git log				# to show history of comit
+git log					# to show history of comit
 git checkout hash			# to jump to previous version of the file
 git checkout master			# to jump to master branch
 git branch				# to list the branches
 git branch newname			# to create a new branch
 git clone https://github.com/xyzrepo	# to clone the github repository
-	
-	
-	
-pull changes into master
-git pull origin master --rebase
+git pull origin master			# to pull updates in master	
+git pull origin master --rebase		# to rebase branch
