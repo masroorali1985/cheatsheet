@@ -12,3 +12,8 @@ ndcli delete -n rr pold-k8s-qa-bap-koopa. A 10.86.5.132 --keep-ip-reservation
 
 
 -n is only for dry run while creatintg, we need to remove -n
+
+
+ndcli list user maali groups
+
+ndcli list user maali 
